@@ -63,21 +63,6 @@
     </div>
   </div>
 
-  <!-- ================= PROJECT DEMO HELPER PILL ================= -->
-  <aside class="fixed bottom-4 right-4 z-40 bg-alits-deep/95 border border-amber-400/40 text-white p-3 sm:p-4 rounded-2xl shadow-2xl backdrop-blur-md max-w-xs sm:max-w-sm">
-    <div class="flex items-center justify-between gap-2 mb-1.5">
-      <span class="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wide text-amber-400">
-        <i class="fa-solid fa-server"></i> Zero-Backend Demo
-      </span>
-      <button onclick="resetAllDemoData()" class="text-[10px] bg-red-950/80 hover:bg-red-900 border border-red-500/40 text-red-300 font-bold px-2 py-0.5 rounded-lg transition" title="Clear local state & restore defaults">
-        <i class="fa-solid fa-rotate-left mr-1"></i>Reset Data
-      </button>
-    </div>
-    <p class="text-[11px] text-slate-300 leading-snug">
-      100% Client-Side. Roll pattern: <code class="text-amber-300 font-mono">[YY]2G1A0[Dept][Roll]</code>. Persists in <strong class="text-amber-300">LocalStorage</strong>.
-    </p>
-  </aside>
-
   <!-- ================= TOP INSTITUTION NOTIFICATION BAR ================= -->
   <div class="bg-alits-deep text-slate-300 text-[11px] py-1.5 px-4 border-b border-white/10 hidden md:block">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -308,12 +293,12 @@
         <div>
           <select id="branchFilter" onchange="renderDirectory()" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
             <option value="All">All Departments</option>
-            <option value="CSE">CSE (Code: 5)</option>
-            <option value="AI & ML">AI & ML (Code: 33)</option>
-            <option value="ECE">ECE (Code: 4)</option>
-            <option value="EEE">EEE (Code: 1)</option>
-            <option value="Mechanical">Mechanical (Code: 3)</option>
-            <option value="Civil">Civil (Code: 2)</option>
+            <option value="CSE">CSE</option>
+            <option value="AI & ML">AI & ML</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Civil">Civil</option>
             <option value="MBA">MBA / MCA</option>
           </select>
         </div>
@@ -608,9 +593,9 @@
       </div>
 
       <div>
-        <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Demo & Storage Notes</h4>
+        <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Alumni Association</h4>
         <p class="mb-3 leading-relaxed">
-          Roll format: <span class="text-amber-300 font-mono">[JoinYear]2G1A0[Dept][Serial]</span>. Client-side database persists in browser LocalStorage.
+          Connecting graduates from all past batches with juniors and alma mater. Roll format: <span class="text-amber-300 font-mono">[JoinYear]2G1A0[Dept][Serial]</span>.
         </p>
         <button onclick="resetAllDemoData()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-amber-300 rounded-lg text-xs font-semibold transition border border-slate-700">
           <i class="fa-solid fa-arrows-rotate mr-1"></i> Reload Sample Data
@@ -717,12 +702,12 @@
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">Department / Branch *</label>
             <select id="regBranch" required class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-amber-500 focus:outline-none text-slate-700">
-              <option value="CSE">CSE (Code: 5)</option>
-              <option value="AI & ML">AI & ML (Code: 33)</option>
-              <option value="ECE">ECE (Code: 4)</option>
-              <option value="EEE">EEE (Code: 1)</option>
-              <option value="Mechanical">Mechanical (Code: 3)</option>
-              <option value="Civil">Civil (Code: 2)</option>
+              <option value="CSE">CSE</option>
+              <option value="AI & ML">AI & ML</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              <option value="Mechanical">Mechanical </option>
+              <option value="Civil">Civil</option>
               <option value="MBA">MBA / MCA</option>
             </select>
           </div>
@@ -1968,7 +1953,7 @@
       document.getElementById('statJobsCount').textContent = jobs.length;
     }
 
-    // --- HARD RESET ACTION ---
+    // --- RESET ACTION ---
     function resetAllDemoData() {
       localStorage.removeItem('alits_users');
       localStorage.removeItem('alits_jobs');
